@@ -4,7 +4,7 @@ class Student:
         self.age = age
         self.address = address
     def GetName(self):
-        print("The student's name is: %s" % self.name)
+        return self.name
     def SelectDataForPrint(self):
         pass
     def Print(self):
@@ -12,10 +12,10 @@ class Student:
 
 class ScienceStudent(Student):
     def SelectDataForPrint(self):
-        return "%d" % self.age
+        return self.age
 
     def Print(self):
-        print("The student is %s years old" % self.SelectDataForPrint())
+        print("The student whose name is %s is %d years old" % (self.name,self.SelectDataForPrint()))
 
 StudentA = ScienceStudent("Bao", 18, "Saigon")
 StudentA.Print()
